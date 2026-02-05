@@ -1,9 +1,12 @@
 import Image1 from '../assets/service-1.svg';
 import Image2 from '../assets/service-2.svg';
 import Image3 from '../assets/service-3.svg';
-import Work1 from "../assets/native-jobs.png";
-import Work2 from "../assets/cryptoverse.png";
-import Work3 from "../assets/travel.png";
+import Work1 from "../assets/project1.png";
+import Work2 from "../assets/project2.png";
+import Work3 from "../assets/project3.png";
+import Blog1 from "../assets/blog1.jpg";
+import Blog2 from "../assets/blog2.jpg";
+import Blog3 from "../assets/blog3.jpg";
 
 export const servicesData = [
     {
@@ -85,7 +88,7 @@ export const aboutData = {
 
 export const homeData = {
     name: "Parijat Biswas",
-    title: "Software Engineer | AI/ML Enthusiast",
+    title: "Backend Developer | AI/ML Enthusiast",
 };
 
 export const socialData = {
@@ -95,3 +98,28 @@ export const socialData = {
     instagram: "https://www.instagram.com/parijat_biswas_",
     google: "https://developers.google.com/profile/u/parijat-biswas",
 };
+
+// Blog Data
+export const blogData = [
+    {
+        id: 1,
+        image: Blog1,
+        title: "Accuracy Alone Isn’t Enough: Rethinking Digital Twins",
+        category: "Tech",
+        url: "https://www.linkedin.com/pulse/accuracy-alone-isnt-enough-rethinking-digital-twins-decisions-biswas-j2u8c"
+    },
+    {
+        id: 2,
+        image: Blog2,
+        title: "How Systems Talk: The Different API Styles",
+        category: "Tutorial",
+        url: "https://www.linkedin.com/pulse/how-systems-talk-different-api-styles-parijat-biswas-wf3me"
+    },
+    {
+        id: 3,
+        image: Blog3,
+        title: "Microservices Architecture: Behind Spotify Wrapped",
+        category: "Case Study",
+        url: "https://medium.com/@parijatb32/microservices-architecture-the-hidden-engine-behind-spotify-wrapped-7b65ebea2419"
+    }
+];
