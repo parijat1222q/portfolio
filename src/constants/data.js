@@ -36,21 +36,21 @@ export const projectsData = [
         image: Work1,
         title: "MERN Fashion Voting & Shopping",
         category: ["Full Stack", "MERN"],
-        repositoryUrl: "https://github.com/parijatb32"
+        repositoryUrl: "https://github.com/parijat1222q/mern-project-Fashion-Voting-and-Shopping-Platform-"
     },
     {
         id: 2,
         image: Work2,
         title: "janSuchna Issue Reporter",
         category: ["React", "TypeScript", "Supabase"],
-        repositoryUrl: "https://github.com/parijatb32"
+        repositoryUrl: "https://github.com/parijat1222q/janSuchna"
     },
     {
         id: 3,
         image: Work3,
         title: "Disease Prediction Toolkit",
         category: ["Python", "ML", "Data Science"],
-        repositoryUrl: "https://github.com/parijatb32"
+        repositoryUrl: "https://github.com/parijat1222q/Disease-Prediction-Toolkit"
     }
 ];
 

@@ -3,6 +3,7 @@ import { toast, ToastContainer } from "react-toastify";
 import emailjs from "@emailjs/browser";
 import "./Contact.css";
 import "react-toastify/dist/ReactToastify.css";
+import { motion } from "framer-motion";
 
 const Contact = (props) => {
     const form = useRef();
@@ -31,19 +32,41 @@ const Contact = (props) => {
 
     return (
         <section className="contact container section" id="contact">
-            <h2 className="section__title">Get In Touch</h2>
+            <motion.h2
+                className="section__title"
+                initial={{ opacity: 0, y: -20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+            >
+                Get In Touch
+            </motion.h2>
 
             <div className="contact__container grid">
-                <div className="contact__info">
+                <motion.div
+                    className="contact__info"
+                    initial={{ opacity: 0, x: -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                >
                     <h3 className="contact__title">Let's talk about everything!</h3>
                     <p className="contact__details">
                         Don't like forms? Send me an email. 👋
                         <br />
                         <strong>parijatb32@gmail.com</strong>
                     </p>
-                </div>
+                </motion.div>
 
-                <form ref={form} onSubmit={sendEmail} className="contact__form">
+                <motion.form
+                    ref={form}
+                    onSubmit={sendEmail}
+                    className="contact__form"
+                    initial={{ opacity: 0, x: 50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                >
                     <div className="contact__form-div">
                         <label className="contact__form-tag">Name</label>
                         <input type="text" name='name' className='contact__form-input' placeholder='Insert your name' required />
@@ -59,10 +82,14 @@ const Contact = (props) => {
                         <textarea name="message" cols="30" rows="10" className='contact__form-input' placeholder='Write your project' required></textarea>
                     </div>
 
-                    <button className="btn">
+                    <motion.button
+                        className="btn"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                    >
                         {loading ? "Sending..." : "Send Message"}
-                    </button>
-                </form>
+                    </motion.button>
+                </motion.form>
             </div>
             <ToastContainer position="bottom-right" theme={props.theme} />
         </section>
