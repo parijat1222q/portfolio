@@ -10,6 +10,7 @@ import Blog from './components/blog/Blog';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
 import useLocalStorage from 'use-local-storage'
+import ScrollProgress from './components/scroll/ScrollProgress';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
 
     return (
         <div className="app" data-theme={theme}>
+            <ScrollProgress />
             <Sidebar theme={theme} switchTheme={switchTheme} />
             <main className='main'>
                 <Home />

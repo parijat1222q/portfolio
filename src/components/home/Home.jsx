@@ -5,6 +5,7 @@ import HeaderSocials from './HeaderSocials';
 import ScrollDown from './ScrollDown';
 import Shapes from './Shapes';
 import { motion } from 'framer-motion';
+import Typewriter from 'typewriter-effect';
 
 const Home = () => {
     return (
@@ -33,7 +34,14 @@ const Home = () => {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.5, delay: 0.4 }}
                 >
-                    Backend Developer | AI/ML Enthusiast
+                    <Typewriter
+                        options={{
+                            strings: ['Backend Developer', 'AI/ML Enthusiast', 'Problem Solver'],
+                            autoStart: true,
+                            loop: true,
+                            deleteSpeed: 50,
+                        }}
+                    />
                 </motion.span>
 
                 <HeaderSocials />

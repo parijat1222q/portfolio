@@ -5,6 +5,7 @@ import { projectsData as Menu } from "../../constants/data";
 import { RiGithubLine, RiLink } from "react-icons/ri";
 
 import { motion } from "framer-motion";
+import Tilt from 'react-parallax-tilt';
 
 const Portfolio = () => {
 	const [items, setItems] = useState(Menu);
@@ -51,20 +52,31 @@ const Portfolio = () => {
 							exit={{ opacity: 0 }}
 							transition={{ duration: 0.3 }}
 							className="portfolio__card"
-							key={id}>
-							<div className="portfolio__thumbnail">
-								<img src={image} alt={title} className="portfolio__img" height="267" loading="lazy" />
-								<div className="portfolio__mask"></div>
-							</div>
+							key={id}
+							style={{ padding: 0 }}
+						>
+							<Tilt
+								tiltMaxAngleX={10}
+								tiltMaxAngleY={10}
+								perspective={1000}
+								transitionSpeed={1000}
+								scale={1.02}
+								style={{ padding: '1.25rem' }}
+							>
+								<div className="portfolio__thumbnail">
+									<img src={image} alt={title} className="portfolio__img" height="267" loading="lazy" />
+									<div className="portfolio__mask"></div>
+								</div>
 
-							<span className="portfolio__category">{category.join(', ')}</span>
-							<h3 className="portfolio__title">{title}</h3>
-							<a href={url} target="_blank" rel="noreferrer" className="portfolio__button">
-								<RiLink className="portfolio__button-icon" />
-							</a>
-							<a href={repositoryUrl} target="_blank" rel="noreferrer" className="portfolio__github-button">
-								<RiGithubLine className="portfolio__button-icon" />
-							</a>
+								<span className="portfolio__category">{category.join(', ')}</span>
+								<h3 className="portfolio__title">{title}</h3>
+								<a href={url} target="_blank" rel="noreferrer" className="portfolio__button">
+									<RiLink className="portfolio__button-icon" />
+								</a>
+								<a href={repositoryUrl} target="_blank" rel="noreferrer" className="portfolio__github-button">
+									<RiGithubLine className="portfolio__button-icon" />
+								</a>
+							</Tilt>
 						</motion.div>
 					);
 				})}

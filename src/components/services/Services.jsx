@@ -2,6 +2,7 @@ import React from 'react';
 import './Services.css';
 import { servicesData } from '../../constants/data';
 import { motion } from 'framer-motion';
+import Tilt from 'react-parallax-tilt';
 
 const containerVariants = {
     hidden: { opacity: 0 },
@@ -45,11 +46,21 @@ const Services = () => {
                             key={id}
                             variants={cardVariants}
                             whileHover={{ scale: 1.03, boxShadow: "0px 10px 30px rgba(0,0,0,0.1)" }}
+                            style={{ padding: 0 }}
                         >
-                            <img src={image} alt={title} className='services__img' width="80" loading="lazy" />
+                            <Tilt
+                                tiltMaxAngleX={10}
+                                tiltMaxAngleY={10}
+                                perspective={1000}
+                                transitionSpeed={1000}
+                                scale={1.02}
+                                style={{ padding: '2rem' }}
+                            >
+                                <img src={image} alt={title} className='services__img' width="80" loading="lazy" />
 
-                            <h3 className="services__title">{title}</h3>
-                            <p className="services__description">{description}</p>
+                                <h3 className="services__title">{title}</h3>
+                                <p className="services__description">{description}</p>
+                            </Tilt>
                         </motion.div>
                     )
                 })}

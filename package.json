@@ -12,10 +12,12 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.5.0",
+    "react-parallax-tilt": "^1.7.319",
     "react-scripts": "5.0.1",
     "react-tabs": "^5.1.0",
     "react-toastify": "^9.0.7",
     "swiper": "^8.3.1",
+    "typewriter-effect": "^2.22.0",
     "use-local-storage": "^2.3.6",
     "web-vitals": "^5.1.0"
   },

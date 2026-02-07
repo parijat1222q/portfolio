@@ -1,0 +1,15 @@
+.progressMainWrapper {
+    background-color: transparent;
+    height: 4px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+}
+
+.progressMainStyle {
+    height: 4px;
+    background: var(--first-color);
+    transition: width 0.1s ease-out;
+}
